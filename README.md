@@ -31,10 +31,18 @@ Install through Unity Package Manager with a Git URL:
 ```json
 {
   "dependencies": {
-    "com.deucarian.common": "https://github.com/Deucarian/Common.git#develop"
+    "com.deucarian.common": "https://github.com/Deucarian/Common.git#main"
   }
 }
 ```
+
+For development builds, use:
+
+```json
+"com.deucarian.common": "https://github.com/Deucarian/Common.git#develop"
+```
+
+npm/scoped-registry distribution is deferred for now. Use Git URLs until the manual release process is finalized.
 
 The package requires Unity `2021.3` or newer.
 
