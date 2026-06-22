@@ -90,6 +90,12 @@ Common has no package dependencies. It does not reference Deucarian Logging, Deu
 
 Common includes EditMode and PlayMode tests for `DestroySafely`. Until shared package validation and reusable CI are introduced, validation is performed through Unity compile/tests and Package Registry governance audits.
 
+## Architecture / Contributor Notes
+
+- [AGENTS.md](AGENTS.md) contains repository-specific ownership and Codex guidance.
+- Deucarian architecture rules live in [Package Registry](https://github.com/Deucarian/Package-Registry/blob/develop/ARCHITECTURE.md).
+- Capability ownership is tracked in [CAPABILITY_OWNERSHIP.md](https://github.com/Deucarian/Package-Registry/blob/develop/CAPABILITY_OWNERSHIP.md).
+
 ## License
 
 See `LICENSE.md`.
