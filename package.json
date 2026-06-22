@@ -1,0 +1,21 @@
+{
+  "name": "com.deucarian.common",
+  "version": "0.1.0",
+  "displayName": "Deucarian Common",
+  "description": "Tiny dependency-free runtime primitives shared across Deucarian packages.",
+  "unity": "2021.3",
+  "author": {
+    "name": "Deucarian"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Deucarian/Common.git"
+  },
+  "keywords": [
+    "deucarian",
+    "common",
+    "unity",
+    "runtime"
+  ],
+  "dependencies": {}
+}
