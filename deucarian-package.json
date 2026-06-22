@@ -1,0 +1,26 @@
+{
+  "packageId": "com.deucarian.common",
+  "displayName": "Deucarian Common",
+  "ownedCapabilities": [
+    "unity-object-lifetime"
+  ],
+  "runtimeAssemblies": [
+    "Deucarian.Common"
+  ],
+  "editorAssemblies": [],
+  "sampleAssemblies": [],
+  "testAssemblies": [
+    "Deucarian.Common.Tests.EditMode",
+    "Deucarian.Common.Tests.PlayMode"
+  ],
+  "requiredDependencies": [],
+  "optionalVersionDefinedDependencies": [],
+  "allowedDirectDebugCalls": [],
+  "allowedDirectUnityObjectLifetimeCalls": [
+    {
+      "file": "Runtime/UnityObjectUtility.cs",
+      "containingSymbol": "UnityObjectUtility.DestroySafely"
+    }
+  ],
+  "expectedSamplesRoot": ""
+}
