@@ -60,6 +60,18 @@ namespace Deucarian.Common.Tests
             Assert.IsFalse(referencesUnityEditor);
         }
 
+        [Test]
+        public void EasingUtilityMatchesSharedMotionPresets()
+        {
+            Assert.That(DeucarianEasingUtility.Evaluate(DeucarianEasing.Linear, 0.25f), Is.EqualTo(0.25f));
+            Assert.That(DeucarianEasingUtility.Evaluate(DeucarianEasing.EaseInCubic, 0.5f), Is.EqualTo(0.125f));
+            Assert.That(DeucarianEasingUtility.Evaluate(DeucarianEasing.EaseOutCubic, 0.5f), Is.EqualTo(0.875f));
+            Assert.That(DeucarianEasingUtility.Evaluate(DeucarianEasing.EaseOutSoftBack, 0f), Is.EqualTo(0f));
+            Assert.That(DeucarianEasingUtility.Evaluate(DeucarianEasing.EaseOutSoftBack, 1f), Is.EqualTo(1f));
+            Assert.That(DeucarianEasingUtility.Evaluate(DeucarianEasing.EaseOutBack, -1f), Is.EqualTo(0f));
+            Assert.That(DeucarianEasingUtility.Evaluate(DeucarianEasing.EaseOutBack, 2f), Is.EqualTo(1f));
+        }
+
         private sealed class TransientScriptableObject : ScriptableObject
         {
         }

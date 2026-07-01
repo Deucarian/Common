@@ -2,7 +2,8 @@
   "packageId": "com.deucarian.common",
   "displayName": "Deucarian Common",
   "ownedCapabilities": [
-    "unity-object-lifetime"
+    "unity-object-lifetime",
+    "shared-motion-easing"
   ],
   "runtimeAssemblies": [
     "Deucarian.Common"

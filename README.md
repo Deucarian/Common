@@ -6,13 +6,14 @@ Deucarian Common is a tiny, dependency-free Unity runtime package for approved l
 
 Package ID: `com.deucarian.common`
 
-Current package version: `0.1.0`.
+Current package version: `0.2.0`.
 
 Common is not a miscellaneous utility package. It owns only approved low-level shared runtime primitives that have organization-wide reuse evidence.
 
 ## Responsibilities
 
 - Provide a canonical helper for safe destruction of transient `UnityEngine.Object` instances across Play Mode and Edit Mode.
+- Provide shared easing presets for package-owned motion systems.
 - Keep shared primitives small, runtime-safe, and dependency-free.
 - Preserve Unity semantics instead of hiding ownership or lifecycle decisions.
 
@@ -55,6 +56,7 @@ For local development, reference the package by file path from a separate Unity 
 ## Public API
 
 - `UnityObjectUtility.DestroySafely(UnityEngine.Object target)`: destroys a transient Unity object using Play Mode or Edit Mode semantics.
+- `DeucarianEasingUtility.Evaluate(DeucarianEasing easing, float value)`: evaluates an approved easing preset from clamped normalized input.
 
 ## Play Mode versus Edit Mode semantics
 
