@@ -9,7 +9,7 @@ Follow the canonical Deucarian governance docs in [Package Registry](https://git
 
 This package owns:
 
-- Tiny dependency-free runtime primitives; currently only `UnityObjectUtility.DestroySafely(UnityEngine.Object target)`.
+- Tiny dependency-free runtime primitives; currently `UnityObjectUtility.DestroySafely(UnityEngine.Object target)` and shared Deucarian motion easing presets.
 
 Registered capabilities:
 - `unity-object-lifetime`
@@ -34,7 +34,7 @@ Optional/version-defined dependencies:
 
 Architecture exceptions:
 
-- Owns the approved direct Unity object lifetime implementation.
+- Owns the approved direct Unity object lifetime implementation and approved shared motion easing primitives.
 
 ## Policies
 
@@ -93,5 +93,5 @@ Also run existing repository tests when changing code or asmdefs. Documentation-
 ## Debug And Unity Object Lifetime
 
 - Do not add direct Unity Debug calls. Add Logging only if this package directly needs logging and governance approves the dependency.
-- This package owns `UnityObjectUtility.DestroySafely`; do not add other Common APIs without audit evidence.
+- This package owns `UnityObjectUtility.DestroySafely` and approved shared motion easing presets; do not add other Common APIs without audit evidence.
 - Test fixture teardown may use `DestroyImmediate` directly.
