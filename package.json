@@ -3,6 +3,7 @@
   "version": "0.2.0",
   "displayName": "Deucarian Common",
   "description": "Tiny dependency-free runtime primitives shared across Deucarian packages.",
+  "license": "MIT",
   "unity": "2021.3",
   "author": {
     "name": "Deucarian"
