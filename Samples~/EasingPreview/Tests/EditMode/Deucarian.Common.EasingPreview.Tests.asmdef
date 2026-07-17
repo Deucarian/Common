@@ -2,6 +2,7 @@
   "name": "Deucarian.Common.EasingPreview.Tests",
   "rootNamespace": "Deucarian.Common.Samples.Tests",
   "references": [
+    "Deucarian.Common",
     "Deucarian.Common.EasingPreview"
   ],
   "includePlatforms": [
