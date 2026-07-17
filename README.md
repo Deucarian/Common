@@ -6,7 +6,7 @@
 
 Common is not a miscellaneous utility package. It owns only approved low-level shared runtime primitives that have organization-wide reuse evidence.
 
-Current package version: `0.2.0`.
+Current package version: `0.2.1`.
 
 ## When to use it
 

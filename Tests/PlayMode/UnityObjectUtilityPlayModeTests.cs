@@ -28,6 +28,19 @@ namespace Deucarian.Common.Tests
         }
 
         [UnityTest]
+        public IEnumerator DestroySafelyHonorsPlayModeDelay()
+        {
+            GameObject gameObject = new GameObject("Common Delayed Cleanup Target");
+
+            UnityObjectUtility.DestroySafely(gameObject, 0.05f);
+
+            yield return null;
+            Assert.IsFalse(gameObject == null);
+            yield return new WaitForSeconds(0.1f);
+            Assert.IsTrue(gameObject == null);
+        }
+
+        [UnityTest]
         public IEnumerator DestroySafelyHandlesComponentTargets()
         {
             GameObject gameObject = new GameObject("Common Component Owner");
