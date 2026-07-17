@@ -1,6 +1,6 @@
 {
   "name": "com.deucarian.common",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "displayName": "Deucarian Common",
   "description": "Tiny dependency-free runtime primitives shared across Deucarian packages.",
   "license": "MIT",
@@ -18,5 +18,12 @@
     "unity",
     "runtime"
   ],
-  "dependencies": {}
+  "dependencies": {},
+  "samples": [
+    {
+      "displayName": "Easing Preview",
+      "description": "A small compiled example that evaluates one shared easing preset at representative normalized times.",
+      "path": "Samples~/EasingPreview"
+    }
+  ]
 }
