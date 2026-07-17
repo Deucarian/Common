@@ -1,0 +1,24 @@
+{
+  "name": "Deucarian.Common.EasingPreview.Tests",
+  "rootNamespace": "Deucarian.Common.Samples.Tests",
+  "references": [
+    "Deucarian.Common",
+    "Deucarian.Common.EasingPreview"
+  ],
+  "includePlatforms": [
+    "Editor"
+  ],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": false,
+  "defineConstraints": [
+    "UNITY_INCLUDE_TESTS"
+  ],
+  "versionDefines": [],
+  "optionalUnityReferences": [
+    "TestAssemblies"
+  ],
+  "noEngineReferences": true
+}

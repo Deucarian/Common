@@ -1,0 +1,16 @@
+{
+  "name": "Deucarian.Common.EasingPreview",
+  "rootNamespace": "Deucarian.Common.Samples",
+  "references": [
+    "Deucarian.Common"
+  ],
+  "includePlatforms": [],
+  "excludePlatforms": [],
+  "allowUnsafeCode": false,
+  "overrideReferences": false,
+  "precompiledReferences": [],
+  "autoReferenced": true,
+  "defineConstraints": [],
+  "versionDefines": [],
+  "noEngineReferences": true
+}
