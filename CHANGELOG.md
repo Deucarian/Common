@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.2.1 - 2026-07-17
+
+- Added the sample smoke test's direct Common assembly reference so imported samples compile independently.
+- Hardened safe Unity object cleanup and added the compiled easing example required by the portfolio sample contract.
+
 ## 0.2.0 - 2026-07-01
 
 - Added shared Deucarian easing presets for reusable runtime motion packages.

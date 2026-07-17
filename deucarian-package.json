@@ -1,6 +1,7 @@
 {
   "packageId": "com.deucarian.common",
   "displayName": "Deucarian Common",
+  "samplePolicy": "compiled-example",
   "ownedCapabilities": [
     "unity-object-lifetime",
     "shared-motion-easing"
@@ -9,10 +10,13 @@
     "Deucarian.Common"
   ],
   "editorAssemblies": [],
-  "sampleAssemblies": [],
+  "sampleAssemblies": [
+    "Deucarian.Common.EasingPreview"
+  ],
   "testAssemblies": [
     "Deucarian.Common.Tests.EditMode",
-    "Deucarian.Common.Tests.PlayMode"
+    "Deucarian.Common.Tests.PlayMode",
+    "Deucarian.Common.EasingPreview.Tests"
   ],
   "requiredDependencies": [],
   "optionalVersionDefinedDependencies": [],
@@ -23,5 +27,5 @@
       "containingSymbol": "UnityObjectUtility.DestroySafely"
     }
   ],
-  "expectedSamplesRoot": ""
+  "expectedSamplesRoot": "Samples~"
 }
