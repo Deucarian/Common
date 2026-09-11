@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.3.0 - 2026-09-11
+
+- Add 27 shared easing presets: quadratic through quintic, sine, exponential, circular, back, elastic and bounce direction families.
+- Preserve all existing serialized preset values and exact clamped endpoints.
+- Add sampled endpoint, symmetry, overshoot and serialized-compatibility tests for every preset.
+
 ## 0.2.1 - 2026-07-17
 
 - Added the sample smoke test's direct Common assembly reference so imported samples compile independently.

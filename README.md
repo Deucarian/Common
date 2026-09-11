@@ -6,7 +6,7 @@
 
 Common is not a miscellaneous utility package. It owns only approved low-level shared runtime primitives that have organization-wide reuse evidence.
 
-Current package version: `0.2.1`.
+Current package version: `0.3.0`.
 
 ## When to use it
 
@@ -77,13 +77,22 @@ float eased = DeucarianEasingUtility.Evaluate(DeucarianEasing.EaseOutSoftBack, n
 
 ## Samples
 
-This package does not include `Samples~`. The public API is intentionally small and covered by package tests.
+Import **Easing Preview** for a compiled example that evaluates a selected preset
+at representative normalized times. Use the Tweens package's isolated editor
+preview to audition enter/exit animation with the shared presets interactively.
 
 ## Public API map
 
 - `UnityObjectUtility.DestroySafely(UnityEngine.Object target)`: destroys a transient Unity object using Play Mode or Edit Mode semantics.
-- `DeucarianEasing`: approved shared easing presets: `Linear`, `EaseInCubic`, `EaseOutCubic`, `EaseOutBack`, and `EaseOutSoftBack`.
+- `DeucarianEasing`: 32 shared presets: Linear; In/Out/InOut variants of Quad,
+  Cubic, Quart, Quint, Sine, Expo, Circ, Back, Elastic and Bounce; plus EaseOutSoftBack.
 - `DeucarianEasingUtility.Evaluate(DeucarianEasing easing, float value)`: evaluates an approved easing preset from clamped normalized input.
+
+The original serialized enum values 0–4 remain unchanged. Input is normalized
+time; endpoints settle exactly at 0 and 1. Back and Elastic intentionally allow
+overshoot, while the consuming renderer decides whether opacity or scale needs
+clamping. Custom Unity AnimationCurve authoring and playback belong to Tweens,
+not this dependency-free preset utility.
 
 ## Integrations
 
