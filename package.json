@@ -12,6 +12,9 @@
     "type": "git",
     "url": "git+https://github.com/Deucarian/Common.git"
   },
+  "documentationUrl": "https://github.com/Deucarian/Common/blob/main/README.md",
+  "changelogUrl": "https://github.com/Deucarian/Common/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/Deucarian/Common/blob/main/LICENSE.md",
   "keywords": [
     "deucarian",
     "common",
