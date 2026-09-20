@@ -43,6 +43,7 @@ namespace Deucarian.Common
 
     /// <summary>
     /// Evaluates shared Deucarian easing presets with clamped normalized input.
+    /// Unrecognized presets use linear interpolation after clamping the input.
     /// </summary>
     public static class DeucarianEasingUtility
     {
