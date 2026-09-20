@@ -1,0 +1,44 @@
+name: Bitbucket package synchronization
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [chore/bitbucket-package-sync]
+    paths: [.github/workflows/bitbucket-sync.yml, .github/package-sync/**]
+
+permissions:
+  contents: read
+
+jobs:
+  verify-access:
+    name: Verify private package access
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+        with:
+          persist-credentials: false
+      - name: Read the private Bitbucket package
+        shell: bash
+        env:
+          BITBUCKET_READ_KEY: ${{ secrets.BITBUCKET_READ_KEY }}
+        run: |
+          set -euo pipefail
+          key="$RUNNER_TEMP/package-sync-key"
+          trap 'rm -f "$key"' EXIT
+          umask 077
+          printf '%s\n' "$BITBUCKET_READ_KEY" > "$key"
+          unset BITBUCKET_READ_KEY
+          export GIT_TERMINAL_PROMPT=0
+          export GIT_SSH_COMMAND="ssh -F /dev/null -i $key -o IdentitiesOnly=yes -o IdentityAgent=none -o BatchMode=yes -o StrictHostKeyChecking=yes -o UserKnownHostsFile=$GITHUB_WORKSPACE/.github/package-sync/known_hosts"
+          git clone --depth=1 --single-branch --branch chore/simultria-package-migration \
+            git@bitbucket.org:simultria/common.git "$RUNNER_TEMP/bitbucket-common"
+          python - "$RUNNER_TEMP/bitbucket-common" <<'PY'
+          import json, pathlib, subprocess, sys
+          root = pathlib.Path(sys.argv[1])
+          manifest = json.loads((root / 'package.json').read_text())
+          assert manifest['name'] == 'com.simultria.common', manifest['name']
+          revision = subprocess.check_output(['git', '-C', str(root), 'rev-parse', 'HEAD'], text=True).strip()
+          assert revision == 'b8db736313ccd6566a9dd76c8c06d8faae625eb2', revision
+          print('Private Bitbucket access verified; expected Simultria package and commit found.')
+          PY
